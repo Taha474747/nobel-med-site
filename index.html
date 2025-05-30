@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarl Nobel Med</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #388E3C;
+      padding: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    section {
+      padding: 2rem;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+      background-color: #2E7D32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .contact-info {
+      line-height: 1.8;
+    }
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .product-card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .product-card h3 {
+      margin-top: 1rem;
+      color: #4CAF50;
+    }
+    .product-card p {
+      font-size: 0.9rem;
+      margin: 1rem 0;
+    }
+    .product-card button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .product-card button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sarl Nobel Med</h1>
+    <p>Medical Equipment & Services</p>
+  </header>
+
+  <nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('services')">Services</a>
+    <a onclick="showSection('products')">Products</a>
+    <a onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Welcome to Sarl Nobel Med</h2>
+    <p>Your trusted partner in medical equipment and healthcare technology.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Sarl Nobel Med is a leading provider of high-quality medical devices and services in Algeria. We are committed to excellence in biomedical support and innovation.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Installation of medical equipment</li>
+      <li>Maintenance and technical support</li>
+      <li>Consulting and project management</li>
+    </ul>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://www.penlon.com/wp-content/uploads/2025/04/Prima-320-Advance-Product-Image.jpg" alt="Penlon Prima 320" />
+        <h3>Penlon Prima 320</h3>
+        <p>The Penlon Prima 320 is a versatile anaesthesia system providing the ideal solution for today’s operating room. It features an 8.4” TFT colour touchscreen, up to six ventilation modes, and optional CO₂ and SpO₂ monitoring.</p>
+        <button onclick="window.location.href='mailto:contact@nobel-med.com?subject=Quote Request: Penlon Prima 320'">Request Quote</button>
+      </div>
+
+      <div class="product-card">
+        <img src="C:\Users\TAHA\OneDrive\Bureau\P451_MRI.jpg" alt="Penlon Prima 451 MRI" />
+        <h3>Penlon Prima 451 MRI</h3>
+        <p>The Penlon Prima 451 is a compact MRI anaesthesia system, designed for use with 0.55, 1.5, 3, and 7 tesla scanners. It offers advanced patient support modes and features an electronic touchscreen ventilator.</p>
+        <button onclick="window.location.href='mailto:contact@nobel-med.com?subject=Quote Request: Penlon Prima 451 MRI'">Request Quote</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Telephone:</strong> +213 (0) 23 41 31 31</p>
+      <p><strong>Tel/Fax:</strong> +213 (0) 23 41 33 33</p>
+      <p><strong>Mobile:</strong></p>
+      <ul>
+        <li>+213 (0) 561 600 100</li>
+        <li>+213 (0) 561 600 200</li>
+        <li>+213 (0) 561 600 300</li>
+        <li>+213 (0) 561 600 400</li>
+      </ul>
+      <p><strong>Email:</strong> <a href="mailto:contact@nobel-med.com">contact@nobel-med.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sarl Nobel Med. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
